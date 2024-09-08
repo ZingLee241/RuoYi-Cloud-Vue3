@@ -102,7 +102,7 @@ function showColumn() {
   open.value = true;
 }
 
-if (props.showColumnsType == 'transfer') {
+if (props.showColumnsType === 'transfer') {
   // 显隐列初始默认隐藏列
   for (let item in props.columns) {
     if (props.columns[item].visible === false) {
@@ -113,7 +113,7 @@ if (props.showColumnsType == 'transfer') {
 
 // 勾选
 function checkboxChange(event, label) {
-  props.columns.filter(item => item.label == label)[0].visible = event;
+  props.columns.filter(item => item.label === label)[0].visible = event;
 }
 
 </script>
